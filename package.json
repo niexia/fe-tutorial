@@ -1,0 +1,29 @@
+{
+  "name": "explicit-code",
+  "version": "1.0.0",
+  "description": "写代码做笔记",
+  "main": "index.js",
+  "dependencies": {
+    "vuepress": "^1.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yangseas/explicit-code.git"
+  },
+  "keywords": [
+    "javascript",
+    "note"
+  ],
+  "author": "yangjin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yangseas/explicit-code/issues"
+  },
+  "homepage": "https://github.com/yangseas/explicit-code#readme"
+}
