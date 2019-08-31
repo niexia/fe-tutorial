@@ -1,5 +1,5 @@
 {
-  "name": "explicit-code",
+  "name": "fe-tutorial",
   "version": "1.0.0",
   "description": "写代码做笔记",
   "main": "index.js",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yangseas/explicit-code.git"
+    "url": "git+https://github.com/yangseas/fe-tutorial.git"
   },
   "keywords": [
     "javascript",
@@ -23,7 +23,7 @@
   "author": "yangjin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yangseas/explicit-code/issues"
+    "url": "https://github.com/yangseas/fe-tutorial/issues"
   },
-  "homepage": "https://github.com/yangseas/explicit-code#readme"
+  "homepage": "https://github.com/yangseas/fe-tutorial#readme"
 }
