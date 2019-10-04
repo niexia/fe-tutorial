@@ -13,10 +13,12 @@ module.exports = {
   },
   base: '/fe-tutorial/',
   themeConfig: {
+    editLinks: true,
     editLinkText: '在 GitHub 上编辑此页',
     lastUpdated: '上次更新',
     nav: [
-      { text: '数据结构和算法', link: '/algorithm/' },
+      { text: '数据结构', link: '/dataStructure/' },
+      { text: '算法', link: '/algorithm/' },
       { text: 'JavaScript', link: '/javaScript/' },
       { text: 'Webpack', link: '/webpack/' },
       { text: '个人博客', link: 'https://yangseas.github.io/' },
@@ -26,17 +28,21 @@ module.exports = {
     sidebar: {
       '/algorithm/': [
         {
-          title: '数据结构',
-          collapsable: false,
-          sidebarDepth: 2,
-          children: []
-        },
-        {
           title: '算法',
           collapsable: false,
           sidebarDepth: 2,
           children: []
         }
+      ],
+      '/dataStructure/': [
+        {
+          title: '数据结构',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            ['', '介绍']
+          ]
+        },
       ],
       '/javaScript/': [
         {
