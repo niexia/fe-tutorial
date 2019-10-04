@@ -6,15 +6,19 @@
   "dependencies": {
     "vuepress": "^1.0.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "deploy": "gh-pages -d docs/.vuepress/dist",
+    "deploy:build": "npm run docs:build && gh-pages -d docs/.vuepress/dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yangseas/fe-tutorial.git"
+    "url": "git+https://github.com/niexias/fe-tutorial.git"
   },
   "keywords": [
     "javascript",
@@ -23,7 +27,7 @@
   "author": "yangjin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yangseas/fe-tutorial/issues"
+    "url": "https://github.com/niexias/fe-tutorial/issues"
   },
-  "homepage": "https://github.com/yangseas/fe-tutorial#readme"
+  "homepage": "https://github.com/niexias/fe-tutorial#readme"
 }
