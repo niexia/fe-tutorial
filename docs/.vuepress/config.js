@@ -52,6 +52,15 @@ module.exports = {
             '数组/练习'
           ]
         },
+        {
+          title: '链表',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            ['链表/链表', '介绍'],
+            '链表/练习'
+          ]
+        },
       ],
       '/javaScript/': [
         {
