@@ -43,6 +43,15 @@ module.exports = {
             ['', '介绍']
           ]
         },
+        {
+          title: '数组',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            ['数组/数组', '介绍'],
+            '数组/练习'
+          ]
+        },
       ],
       '/javaScript/': [
         {
