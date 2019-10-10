@@ -61,6 +61,24 @@ module.exports = {
             '链表/练习'
           ]
         },
+        {
+          title: '栈',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            ['栈/栈', '介绍'],
+            '栈/练习'
+          ]
+        },
+        {
+          title: '队列',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            ['队列/队列', '介绍'],
+            '队列/练习'
+          ]
+        },
       ],
       '/javaScript/': [
         {
