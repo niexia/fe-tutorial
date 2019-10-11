@@ -32,6 +32,14 @@ module.exports = {
           collapsable: false,
           sidebarDepth: 2,
           children: []
+        },
+        {
+          title: '递归',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            ['递归/递归', '理解递归']
+          ]
         }
       ],
       '/dataStructure/': [
