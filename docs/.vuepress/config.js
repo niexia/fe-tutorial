@@ -40,6 +40,15 @@ module.exports = {
           children: [
             ['递归/递归', '理解递归']
           ]
+        },
+        {
+          title: '排序',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            ['排序/排序', '排序算法介绍'],
+            '排序/冒泡、插入和选择排序'
+          ]
         }
       ],
       '/dataStructure/': [
