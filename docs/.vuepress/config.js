@@ -130,9 +130,9 @@ module.exports = {
           collapsable: false,
           sidebarDepth: 2,
           children: [
-            '/RegExp/正则表达式',
-            '/RegExp/RegExp的属性和方法',
-            '/RegExp/应用'
+            'RegExp/正则表达式',
+            'RegExp/RegExp的属性和方法',
+            'RegExp/应用'
           ]
         }
       ],

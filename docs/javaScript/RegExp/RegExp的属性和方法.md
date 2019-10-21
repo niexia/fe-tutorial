@@ -152,7 +152,7 @@ pattern.exec(str)  // ['cat']
 str.match(pattern) // ['cat']
 ```
 
-![regexp-exec1](../.vuepress/public/images/javascript-regexp-exec1.png)
+![regexp-exec1](../../.vuepress/public/images/javascript-regexp-exec1.png)
 
 ```js
 
@@ -163,7 +163,7 @@ pattern.exec(str)  // ['cat']
 str.match(pattern) // ['cat','bat,'eat']
 ```
 
-![regexp-exec2](../.vuepress/public/images/javascript-regexp-exec2.png)
+![regexp-exec2](../../.vuepress/public/images/javascript-regexp-exec2.png)
 
 ### test
 
