@@ -104,7 +104,7 @@ module.exports = {
           sidebarDepth: 2,
           children: [
             ['', '介绍'],
-            '执行上下文和执行栈',
+            '执行环境和执行栈',
             '作用域和闭包',
             'this',
             '原型链',
