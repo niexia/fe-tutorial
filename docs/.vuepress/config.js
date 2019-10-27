@@ -47,7 +47,10 @@ module.exports = {
           sidebarDepth: 2,
           children: [
             ['排序/排序', '排序算法介绍'],
-            '排序/冒泡、插入和选择排序'
+            '排序/冒泡、插入和选择排序',
+            '排序/归并排序和快速排序',
+            '排序/桶排序、计数排序和基数排序',
+            '排序/排序优化'
           ]
         }
       ],
@@ -94,6 +97,14 @@ module.exports = {
           children: [
             ['队列/队列', '介绍'],
             '队列/练习'
+          ]
+        },
+        {
+          title: '跳表',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            '跳表/跳表'
           ]
         },
       ],
