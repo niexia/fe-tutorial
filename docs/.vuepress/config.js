@@ -52,6 +52,65 @@ module.exports = {
             '排序/桶排序、计数排序和基数排序',
             '排序/排序优化'
           ]
+        },
+        {
+          title: '二分查找',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            '二分查找/二分查找',
+            '二分查找/二分查找的变形'
+          ]
+        },
+        {
+          title: '哈希算法',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            '哈希算法/哈希算法'
+          ]
+        },
+        {
+          title: '字符串匹配',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            '字符串匹配/BK算法和RK算法',
+            '字符串匹配/BM算法',
+            '字符串匹配/KMP算法'
+          ]
+        },
+        {
+          title: '贪心算法',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            '贪心算法/贪心算法'
+          ]
+        },
+        {
+          title: '分治算法',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            '分治算法/分治算法'
+          ]
+        },
+        {
+          title: '回溯算法',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            '回溯算法/回溯算法'
+          ]
+        },
+        {
+          title: '动态规划',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            '动态规划/动态规划'
+          ]
         }
       ],
       '/dataStructure/': [
