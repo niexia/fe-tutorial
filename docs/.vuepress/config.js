@@ -75,7 +75,7 @@ module.exports = {
           collapsable: false,
           sidebarDepth: 2,
           children: [
-            '字符串匹配/BK算法和RK算法',
+            '字符串匹配/BF算法和RK算法',
             '字符串匹配/BM算法',
             '字符串匹配/KMP算法'
           ]
