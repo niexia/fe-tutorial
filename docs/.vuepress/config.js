@@ -204,6 +204,30 @@ module.exports = {
             'RegExp/RegExp的属性和方法',
             'RegExp/应用'
           ]
+        },
+        {
+          title: '浏览器工作原理',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            'browser/浏览器的多进程和JS单线程',
+            'browser/浏览器渲染过程',
+            'browser/EventLoop',
+            'browser/栈空间和堆空间',
+            'browser/垃圾回收',
+          ]
+        },
+        {
+          title: '性能优化',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            'effective/性能优化',
+            'effective/DNS缓存和预解析',
+            'effective/减少请求次数和体积',
+            'effective/利用缓存',
+            'effective/CDN',
+          ]
         }
       ],
       '/webpack/': [
