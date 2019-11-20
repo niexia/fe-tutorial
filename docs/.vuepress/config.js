@@ -21,8 +21,8 @@ module.exports = {
       { text: '算法', link: '/algorithm/' },
       { text: 'JavaScript', link: '/javaScript/' },
       { text: 'Webpack', link: '/webpack/' },
-      { text: '个人博客', link: 'https://yangseas.github.io/' },
-      { text: 'github', link: 'https://github.com/yangseas' },
+      { text: '个人博客', link: 'https://niexias.github.io/' },
+      { text: 'github', link: 'https://github.com/niexias' },
     ],
     sidebarDepth: 2,
     sidebar: {
