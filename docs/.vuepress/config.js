@@ -227,6 +227,7 @@ module.exports = {
             'effective/减少请求次数和体积',
             'effective/利用缓存',
             'effective/CDN',
+            'effective/浏览器渲染机制和优化',
           ]
         }
       ],
