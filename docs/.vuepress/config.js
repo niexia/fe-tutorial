@@ -166,6 +166,49 @@ module.exports = {
             '跳表/跳表'
           ]
         },
+        {
+          title: '散列表',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            '散列表/散列表'
+          ]
+        },
+        {
+          title: '二叉树',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            '二叉树/二叉树',
+            '二叉树/二叉查找树',
+            '二叉树/红黑树'
+          ]
+        },
+        {
+          title: '堆',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            '堆/堆和堆排序',
+            '堆/堆的应用',
+          ]
+        },
+        {
+          title: '图',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            '图/图',
+          ]
+        },
+        {
+          title: 'Tire树',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            'Tire树/Tire树',
+          ]
+        },
       ],
       '/javaScript/': [
         {
