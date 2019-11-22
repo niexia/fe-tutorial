@@ -276,23 +276,17 @@ module.exports = {
       ],
       '/webpack/': [
         {
-          title: 'Webpack',
+          title: 'webpack',
           collapsable: false,
           sidebarDepth: 2,
           children: [
             ['', '介绍'],
             'webpack打包过程',
+            'demo',
+            '优化',
+            'vue-cli2中的配置说明',
           ]
         },
-        {
-          title: 'vue-cli2模板解析',
-          collapsable: false,
-          sidebarDepth: 2,
-          children: [
-            ['vue-cli2介绍', '介绍'],
-            'vue-cli2模板解析',
-          ]
-        }
       ],
     }
   },
