@@ -137,6 +137,7 @@ module.exports = {
           sidebarDepth: 2,
           children: [
             ['链表/链表', '介绍'],
+            '链表/手写链表的技巧',
             '链表/练习'
           ]
         },
