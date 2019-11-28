@@ -4,7 +4,7 @@ heroImage: ./logo.jpg
 heroText: fe-tutorial
 tagline: 前端知识学习和使用笔记
 actionText: 开始阅读 →
-actionLink: /dataStructure/
+actionLink: /javaScript/
 features:
 - title: 数据结构和算法
   details: 常见数据结构和算法的介绍，以及基本使用以及题目分析。

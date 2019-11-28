@@ -17,8 +17,7 @@ module.exports = {
     editLinkText: '在 GitHub 上编辑此页',
     lastUpdated: '上次更新',
     nav: [
-      { text: '数据结构', link: '/dataStructure/' },
-      { text: '算法', link: '/algorithm/' },
+      { text: '数据结构和算法', link: '/algo/' },
       { text: 'JavaScript', link: '/javaScript/' },
       { text: 'Webpack', link: '/webpack/' },
       { text: '个人博客', link: 'https://niexias.github.io/' },
@@ -26,12 +25,51 @@ module.exports = {
     ],
     sidebarDepth: 2,
     sidebar: {
-      '/algorithm/': [
+      '/algo/': [
         {
-          title: '算法',
+          title: '数据结构和算法',
           collapsable: false,
           sidebarDepth: 2,
-          children: []
+          children: [
+            ['', '介绍']
+          ]
+        },
+        {
+          title: '数组',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            '数组/数组',
+            '数组/练习'
+          ]
+        },
+        {
+          title: '链表',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            '链表/链表',
+            '链表/手写链表的技巧',
+            '链表/练习'
+          ]
+        },
+        {
+          title: '栈',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            '栈/栈',
+            '栈/练习'
+          ]
+        },
+        {
+          title: '队列',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            '队列/队列',
+            '队列/练习'
+          ]
         },
         {
           title: '递归',
@@ -63,11 +101,54 @@ module.exports = {
           ]
         },
         {
+          title: '跳表',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            '跳表/跳表'
+          ]
+        },
+        {
+          title: '散列表',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            '散列表/散列表'
+          ]
+        },
+        {
           title: '哈希算法',
           collapsable: false,
           sidebarDepth: 2,
           children: [
             '哈希算法/哈希算法'
+          ]
+        },
+        {
+          title: '二叉树',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            '二叉树/二叉树',
+            '二叉树/二叉查找树',
+            '二叉树/红黑树'
+          ]
+        },
+        {
+          title: '堆',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            '堆/堆和堆排序',
+            '堆/堆的应用',
+          ]
+        },
+        {
+          title: '图',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            '图/图',
           ]
         },
         {
@@ -78,6 +159,14 @@ module.exports = {
             '字符串匹配/BF算法和RK算法',
             '字符串匹配/BM算法',
             '字符串匹配/KMP算法'
+          ]
+        },
+        {
+          title: 'Tire树',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            'Tire树/Tire树',
           ]
         },
         {
@@ -112,104 +201,6 @@ module.exports = {
             '动态规划/动态规划'
           ]
         }
-      ],
-      '/dataStructure/': [
-        {
-          title: '数据结构',
-          collapsable: false,
-          sidebarDepth: 2,
-          children: [
-            ['', '介绍']
-          ]
-        },
-        {
-          title: '数组',
-          collapsable: false,
-          sidebarDepth: 2,
-          children: [
-            ['数组/数组', '介绍'],
-            '数组/练习'
-          ]
-        },
-        {
-          title: '链表',
-          collapsable: false,
-          sidebarDepth: 2,
-          children: [
-            ['链表/链表', '介绍'],
-            '链表/手写链表的技巧',
-            '链表/练习'
-          ]
-        },
-        {
-          title: '栈',
-          collapsable: false,
-          sidebarDepth: 2,
-          children: [
-            ['栈/栈', '介绍'],
-            '栈/练习'
-          ]
-        },
-        {
-          title: '队列',
-          collapsable: false,
-          sidebarDepth: 2,
-          children: [
-            ['队列/队列', '介绍'],
-            '队列/练习'
-          ]
-        },
-        {
-          title: '跳表',
-          collapsable: false,
-          sidebarDepth: 2,
-          children: [
-            '跳表/跳表'
-          ]
-        },
-        {
-          title: '散列表',
-          collapsable: false,
-          sidebarDepth: 2,
-          children: [
-            '散列表/散列表'
-          ]
-        },
-        {
-          title: '二叉树',
-          collapsable: false,
-          sidebarDepth: 2,
-          children: [
-            '二叉树/二叉树',
-            '二叉树/二叉查找树',
-            '二叉树/红黑树'
-          ]
-        },
-        {
-          title: '堆',
-          collapsable: false,
-          sidebarDepth: 2,
-          children: [
-            '堆/堆和堆排序',
-            '堆/堆的应用',
-          ]
-        },
-        {
-          title: '图',
-          collapsable: false,
-          sidebarDepth: 2,
-          children: [
-            '图/图',
-          ]
-        },
-        {
-          title: 'Tire树',
-          collapsable: false,
-          sidebarDepth: 2,
-          children: [
-            'Tire树/Tire树',
-          ]
-        },
       ],
       '/javaScript/': [
         {
