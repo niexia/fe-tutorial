@@ -138,7 +138,7 @@ module.exports = {
 - loader 可以是同步的，也可以是异步的。
 - loader 运行在 Node.js 中，并且能够执行任何 Node.js 能做到的操作。
 - loader 可以通过 options 对象配置（仍然支持使用 query 参数来设置选项，但是这种方式已被废弃）。
-- 除了常见的通过 `package.json` 的 `main` 来将一个 npm 模块导出为 loader，还可以在 `module.rules` 中使用 `loader` 字段直接引用一个模块。
+- 除了常见的通过 ``package.json`` 的 `main` 来将一个 npm 模块导出为 loader，还可以在 `module.rules` 中使用 `loader` 字段直接引用一个模块。
 - 插件(plugin)可以为 loader 带来更多特性。
 - loader 能够产生额外的任意文件。
 
@@ -189,7 +189,7 @@ module.exports = function(source) {
 
 loader 用于转换某些类型的模块，而插件则可以用于执行范围更广的任务。包括：打包优化，资源管理，注入环境变量。
 
-想要使用一个插件，你只需要 require() 它，然后把它添加到 plugins 数组中。多数插件可以通过选项(option)自定义。你也可以在一个配置文件中因为不同目的而多次使用同一个插件，这时需要通过使用 new 操作符来创建它的一个实例。
+想要使用一个插件，你只需要 `require()` 它，然后把它添加到 `plugins` 数组中。多数插件可以通过选项（`option`）自定义。你也可以在一个配置文件中因为不同目的而多次使用同一个插件，这时需要通过使用 `new` 操作符来创建它的一个实例。
 
 **webpack.config.js**
 
@@ -247,13 +247,13 @@ module.exports = {
 
 ## 模块(module)
 
-在模块化编程中，开发者将程序分解成离散功能块(discrete chunks of functionality)，并称之为**模块**。
+在模块化编程中，开发者将程序分解成离散功能块 (discrete chunks of functionality)，并称之为**模块**。
 
 每个模块具有比完整程序更小的接触面，使得校验、调试、测试轻而易举。 精心编写的模块提供了可靠的抽象和封装界限，使得应用程序中每个模块都具有条理清楚的设计和明确的目的。
 
-### webpack模块
+### webpack 模块
 
-对比 Node.js 模块，webpack _模块_能够以各种方式表达它们的依赖关系，几个例子如下：
+对比 Node.js 模块，webpack 模块能够以各种方式表达它们的依赖关系，几个例子如下：
 
 - ES2015 `import` 语句
 - CommonJS `require()` 语句
@@ -263,8 +263,7 @@ module.exports = {
 
 ### 模块解析
 
-resolver 是一个库(library)，用于帮助找到模块的绝对路径。
-一个模块可以作为另一个模块的依赖模块，然后被后者引用，如下：
+resolver 是一个库(library)，用于帮助找到模块的绝对路径。 一个模块可以作为另一个模块的依赖模块，然后被后者引用，如下：
 
 ```js
 import foo from 'path/to/module';
@@ -272,9 +271,9 @@ import foo from 'path/to/module';
 require('path/to/module');
 ```
 
-所依赖的模块可以是来自应用程序代码或第三方的库(library)。这些代码在包含在每个 `require/import` 语句中。当打包模块时，webpack 使用 `enhanced-resolve` 来解析文件路径。
+所依赖的模块可以是来自应用程序代码或第三方的库(library)。 resolver 帮助 webpack 从每个如 `require/import `语句中，找到需要引入到 bundle 中的模块代码。 当打包模块时，webpack 使用 [enhanced-resolve](https://github.com/webpack/enhanced-resolve) 来解析文件路径。
 
-webpack 能够解析三种文件路径:
+#### webpack 中的解析规则
 
 **1. 绝对路径**
 
@@ -283,6 +282,7 @@ import '/home/me/file';
 
 import 'C:\\Users\\me\\file';
 ```
+
 由于我们已经取得文件的绝对路径，因此不需要进一步再做解析。
 
 **2. 相对路径**
@@ -292,7 +292,7 @@ import '../src/file1';
 import './file2';
 ```
 
-在这种情况下，使用 `import` 或 `require` 的资源文件(resource file)所在的目录被认为是上下文目录(context directory)。在 `import/require` 中给定的相对路径，会添加此上下文路径(context path)，以产生模块的绝对路径(absolute path)。
+在这种情况下，使用 `import` 或 `require` 的资源文件所在的目录，被认为是上下文目录 (context directory)。在 `import/require` 中给定的相对路径，会拼接此上下文路径 (context path)，以产生模块的绝对路径。
 
 **3. 模块路径**
 
@@ -301,67 +301,20 @@ import 'module';
 import 'module/lib/file';
 ```
 
-模块将在 `resolve.modules` 中指定的所有目录内搜索。你可以替换初始模块路径，此替换路径通过使用 `resolve.alias` 配置选项来创建一个别名。resolve 配置示例。
+模块将在 `resolve.modules` 中指定的所有目录内搜索。 你可以替换初始模块路径，此替换路径通过使用 `resolve.alias` 配置选项来创建一个别名。
 
-**webpack.config.js**
-
-```js
-var path = require("path");
-// ...
-function resolve (dir) {
-  return path.join(__dirname, '..', dir)
-}
-module.exports = {
-  // ...
-  resolve: {
-    modules: ['node_modules'], // 默认值
-    extensions: ['.js', '.vue', '.json'], // 自动解析确定的扩展。
-    enforceExtension: false, // 如果是 true，将不允许无扩展名(extension-less)文件。
-    alias: { // 创建 `import` 或 `require` 的别名，来确保模块引入变得更简单。
-      'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve('src'),
-      'assets': resolve('src/assets')
-    },
-    // 当从 npm 包中导入模块时:import * as D3 from "d3"，
-    // 此选项将决定在 package.json 中使用哪个字段导入模块。
-    mainFields: ['browser', 'module', 'main'], 
-  },
-}
-```
-
-根据上述规则解析路径之后，解析器（resolver）将检查路径是否指向文件或目录，如果路径不存在就会报错。
-
-1. 指向的是文件
+一旦根据上述规则解析路径后，resolver 将检查路径是否指向文件或目录。如果路径指向一个文件：
 
 - 如果路径具有文件扩展名，则被直接将文件打包。
-- 否则，将使用 [resolve.extensions] 选项作为文件扩展名来解析，此选项告诉解析器在解析中能够接受哪些扩展名（例如 .js, .jsx）。
+- 否则，将使用 [`resolve.extensions`] 选项作为文件扩展名来解析，此选项告诉 resolver 在解析中能够接受哪些扩展名（例如 `.js`, `.jsx`）。
 
-2. 如果路径指向一个文件夹，则采取以下步骤找到具有正确扩展名的正确文件。
+如果路径指向一个文件夹，则采取以下步骤找到具有正确扩展名的正确文件：
 
-- 如果文件夹中包含 package.json 文件，则按照顺序查找 resolve.mainFields 配置选项中指定的字段。并且 package.json 中的第一个这样的字段确定文件路径。
+- 如果文件夹中包含 `package.json` 文件，则按照顺序查找 `resolve.mainFields` 配置选项中指定的字段。通过 `package.json` 中的第一个字段确定文件路径。
+- 如果不存在 `package.json` 文件或者 `package.json` 文件中的 main 字段没有返回一个有效路径，则按照顺序查找 `resolve.mainFiles` 配置选项中指定的文件名，看是否能在 import/require 目录下匹配到一个存在的文件名。
+- 文件扩展名通过 `resolve.extensions` 选项，采用类似的方法进行解析。
 
-```js
-import * as D3 from "d3"
-// ...
-```
-
-而在 d3 的 package.json 中含有这些字段：
-
-```js
-{
-  // ...
-  "main": "dist/d3.node.js",
-  "module": "index",
-  "name": "d3",
-  // ...
-}
-```
-
-那么实际从 module 属性解析文件。在这里 browser 是 mainFields 的第一项，但是不存在。同时，由 webpack 打包的 Node.js 应用程序默认会从 module 字段中解析文件。
-
-- 如果 package.json 文件不存在或者 package.json 文件中的 main 字段没有返回一个有效路径，则按照顺序查找 resolve.mainFiles 配置选项中指定的文件名，看是否能在 import/require 目录下匹配到一个存在的文件名。
-
-- 文件扩展名通过 resolve.extensions 选项采用类似的方法进行解析。
+webpack 根据构建目标 (build target)，为这些选项提供了合理的默认配置。
 
 **说明一下路径解析一些“名称”的含义：**
 
@@ -443,8 +396,8 @@ This dependency was not found:
 To install it, you can run: npm install --save @/assets/css/base
 ```
 
-### 依赖图
+## 依赖图
 
-任何时候，一个文件依赖于另一个文件，webpack 就把此视为文件之间有依赖关系。这使得 webpack 可以接收非代码资源(non-code asset)（例如图像或 web 字体），并且可以把它们作为_依赖_提供给你的应用程序。
+任何时候，一个文件依赖于另一个文件，webpack 就把此视为文件之间有依赖关系。这使得 webpack 可以接收非代码资源(non-code asset)（例如图像或 web 字体），并且可以把它们作为**依赖**提供给你的应用程序。
 
 webpack 从命令行或配置文件中定义的一个模块列表开始，处理你的应用程序。 从这些入口起点开始，webpack 递归地构建一个依赖图，这个依赖图包含着应用程序所需的每个模块，然后将所有这些模块打包为少量的 bundle - 可由浏览器加载。
