@@ -1,3 +1,6 @@
+// 引入样式
+import "./../style/img.css";
+
 let smallImg = document.createElement('img');
 smallImg.src = require('./../images/nx-small.png'); // 必须 require 进来
 document.body.appendChild(smallImg);

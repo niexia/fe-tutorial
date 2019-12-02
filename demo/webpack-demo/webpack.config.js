@@ -28,6 +28,18 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true // 启用 CSS 模块和设置模式
+            }
+          }
+        ]
       }
     ]
   }
