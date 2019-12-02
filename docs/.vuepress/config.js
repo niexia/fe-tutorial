@@ -274,7 +274,7 @@ module.exports = {
           sidebarDepth: 2,
           children: [
             ['', '介绍'],
-            'demo',
+            'webpack从入门到真实项目配置',
             'vue-cli2中的配置说明',
             '优化'
           ]
