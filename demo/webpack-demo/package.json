@@ -21,6 +21,9 @@
   },
   "homepage": "https://github.com/niexias/fe-tutorial#readme",
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
     "webpack": "^3.6.0"
   }
 }
