@@ -1,0 +1,25 @@
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "webpack 简单配置",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niexias/fe-tutorial.git"
+  },
+  "keywords": [
+    "webpack-config"
+  ],
+  "author": "niexias",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/niexias/fe-tutorial/issues"
+  },
+  "homepage": "https://github.com/niexias/fe-tutorial#readme",
+  "devDependencies": {
+    "webpack": "^3.6.0"
+  }
+}
