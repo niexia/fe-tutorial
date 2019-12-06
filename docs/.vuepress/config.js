@@ -149,6 +149,7 @@ module.exports = {
           sidebarDepth: 2,
           children: [
             '图/图',
+            '图/深度和广度优先搜索'
           ]
         },
         {
