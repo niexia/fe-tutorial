@@ -19,12 +19,12 @@ console.log(bar); // {name: "Vue", age: 20}
 按照这个过程实现一个 `new` 操作符：
 
 ```js
-function myNew() {
+function myNew(fn) {
   var obj = new Object(); // 创建一个新对象
-  var Ctor = [].shift.call(arguments);
-  obj.__proto__ = Ctor.prototype; // 执行 [[Prototype]] 链接
-  var result = Ctor.apply(obj, arguments); // 绑定到函数调用的 this
-  return result === 'object' ? result : obj; // 返回对象
+  obj.__proto__ = fn.prototype; // 执行 [[Prototype]] 链接
+  var args = [].slice.call(arguments, 1); 
+  var result = fn.apply(obj, args); // 绑定到函数调用的 this
+  return typeof result === 'object' && result !== null ? result : obj; // 返回对象
 }
 
 var baz = myNew(Foo, 'Vue', 20);
