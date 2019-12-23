@@ -224,7 +224,7 @@ setTimeout( bar, 100 ); // 2
 bar.call( window ); // 2
 ```
 
-硬绑定的典型应用场景就是创建一个包裹函数，复杂就是参数并返回值：
+硬绑定的典型应用场景就是创建一个包裹函数，负责接收参数并返回值：
 
 ```js
 function foo(something) {
