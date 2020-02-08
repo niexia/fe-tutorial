@@ -299,6 +299,13 @@ module.exports = {
             'webpack/vue-cli2中的配置说明',
             'webpack/优化'
           ]
+        }, {
+          title: '工程化',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            'engineering/如何配置git提交规范',
+          ]
         }
       ],
     }
