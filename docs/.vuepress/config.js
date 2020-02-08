@@ -13,15 +13,16 @@ module.exports = {
   },
   base: '/fe-tutorial/',
   themeConfig: {
+    repo: 'niexias/fe-tutorial',
     editLinks: true,
     editLinkText: '在 GitHub 上编辑此页',
     lastUpdated: '上次更新',
     nav: [
       { text: '数据结构和算法', link: '/algo/' },
+      { text: '网络协议', link: '/network/' },
       { text: 'JavaScript', link: '/javaScript/' },
-      { text: 'Webpack', link: '/webpack/' },
+      { text: '前端工程化', link: '/fee/' },
       { text: '个人博客', link: 'https://niexias.github.io/' },
-      { text: 'github', link: 'https://github.com/niexias' },
     ],
     sidebarDepth: 2,
     sidebar: {
@@ -203,6 +204,18 @@ module.exports = {
           ]
         }
       ],
+      '/network/': [{
+        title: 'network',
+        collapsable: false,
+        sidebarDepth: 2,
+        children: [
+          ['', '介绍'],
+          'http',
+          'https',
+          'UPD和TCP',
+          'get和post的区别'
+        ]
+      }, ],
       '/javaScript/': [
         {
           title: 'JavaScript',
@@ -268,18 +281,25 @@ module.exports = {
           ]
         }
       ],
-      '/webpack/': [
+      '/fee/': [
         {
+          title: 'git',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            'git/'
+          ]
+        }, {
           title: 'webpack',
           collapsable: false,
           sidebarDepth: 2,
           children: [
-            ['', '介绍'],
-            '从入门到真实项目配置',
-            'vue-cli2中的配置说明',
-            '优化'
+            'webpack/介绍',
+            'webpack/从入门到真实项目配置',
+            'webpack/vue-cli2中的配置说明',
+            'webpack/优化'
           ]
-        },
+        }
       ],
     }
   },
