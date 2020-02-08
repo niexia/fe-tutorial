@@ -7,14 +7,24 @@
     "vuepress": "^1.0.3"
   },
   "devDependencies": {
-    "gh-pages": "^2.1.1"
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "commitizen": "^4.0.3",
+    "gh-pages": "^2.1.1",
+    "husky": "^4.2.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "deploy": "gh-pages -d docs/.vuepress/dist",
-    "deploy:build": "npm run docs:build && gh-pages -d docs/.vuepress/dist"
+    "deploy:build": "npm run docs:build && gh-pages -d docs/.vuepress/dist",
+    "commit": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
   },
   "repository": {
     "type": "git",
