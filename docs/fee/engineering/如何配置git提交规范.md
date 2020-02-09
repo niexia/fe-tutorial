@@ -184,9 +184,9 @@ module.exports = {
 
 ### git hook
 
-上面已经配置了校验，但是如果提交的时候如果 `npm run commit` ，那么就不会通过我们配置好的规范来填写。
+上面已经配置了校验，但是如果提交的时候根据 `npm run commit` 的提示规范填写，那么就不会通过我们配置好的规范来填写。
 
-所以还需要 git hook，可以通过 git hook 在 pre-commit 进行 eslint，在 commit-msg 阶段进行 commit message lint。这样即使直接通过 `git commit -m "xxx` 也进行格式校验。
+所以还需要 git hook，可以通过 git hook 在 pre-commit 进行 eslint，在 commit-msg 阶段进行 commit message lint。这样即使直接通过 `git commit -m "xxx"` 也进行格式校验。
 
 - husky：git 钩子变得简单，可以防止错误糟糕的 git 提交，推送等。
 
