@@ -2,7 +2,24 @@ module.exports = {
   title: 'fe-tutorial',
   description: '前端学习笔记',
   head: [
-    ['link', {rel: 'icon', href: '/favicon.ico'}]
+    ['link', {
+      rel: 'icon', 
+      href: '/favicon.ico'
+    }],
+    ['script', {
+      async: true,
+      src: "https://www.googletagmanager.com/gtag/js?id=UA-163994034-1"
+    }],
+    ['script', {}, 
+      `
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-163994034-1');
+      `
+    ]
   ],
   configureWebpack: {
     resolve: {
@@ -296,8 +313,9 @@ module.exports = {
           children: [
             'webpack/介绍',
             'webpack/初识webpack',
-            'webpack/从入门到真实项目配置',
-            'webpack/vue-cli2中的配置说明',
+            'webpack/webpack核心概念',
+            // 'webpack/从入门到真实项目配置',
+            // 'webpack/vue-cli2中的配置说明',
             'webpack/优化'
           ]
         }, {
