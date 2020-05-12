@@ -35,78 +35,15 @@ module.exports = {
     editLinkText: '在 GitHub 上编辑此页',
     lastUpdated: '上次更新',
     nav: [
+      { text: 'JavaScript', link: '/javaScript/' },
       { text: '数据结构和算法', link: '/algo/' },
       { text: '网络协议', link: '/network/' },
-      { text: 'JavaScript', link: '/javaScript/' },
       { text: '前端工程化', link: '/fee/' },
       { text: '个人博客', link: 'https://niexias.github.io/' },
     ],
     sidebarDepth: 2,
     sidebar: {
-      '/algo/': [
-        {
-          title: '数据结构和算法',
-          collapsable: false,
-          sidebarDepth: 2,
-          children: [
-            ['', '介绍'],
-            '数组/数组',
-            '链表/链表',
-            '链表/手写链表的技巧',
-            '栈/栈',
-            '递归/递归',
-            ['排序/排序', '排序算法介绍'],
-            '排序/冒泡、插入和选择排序',
-            '排序/归并排序和快速排序',
-            '排序/桶排序、计数排序和基数排序',
-            '排序/排序优化',
-            '二分查找/二分查找',
-            '二分查找/二分查找的变形',
-            '跳表/跳表',
-            '散列表/散列表',
-            '哈希算法/哈希算法',
-            '二叉树/二叉树',
-            '二叉树/二叉查找树',
-            '二叉树/红黑树',
-            '堆/堆和堆排序',
-            '堆/堆的应用',
-            '图/图',
-            '图/深度和广度优先搜索',
-            '字符串匹配/BF算法和RK算法',
-            '字符串匹配/BM算法',
-            '字符串匹配/KMP算法',
-            'Tire树/Tire树',
-            '贪心算法/贪心算法',
-            '分治算法/分治算法',
-            '回溯算法/回溯算法',
-            '动态规划/动态规划'
-          ]
-        },
-        {
-          title: 'LeetCode',
-          collapsable: false,
-          sidebarDepth: 2,
-          children: [
-            'leetcode/数组',
-            'leetcode/链表',
-            'leetcode/队列',
-          ]
-        },
-      ],
-      '/network/': [{
-        title: 'network',
-        collapsable: false,
-        sidebarDepth: 2,
-        children: [
-          ['', '介绍'],
-          'http',
-          'https',
-          'UPD和TCP',
-          'get和post的区别'
-        ]
-      }, ],
-      '/javaScript/': [
-        {
+      '/javaScript/': [{
           title: 'JavaScript',
           collapsable: false,
           sidebarDepth: 2,
@@ -170,6 +107,68 @@ module.exports = {
           ]
         }
       ],
+      '/algo/': [
+        {
+          title: '数据结构和算法',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            ['', '介绍'],
+            '数组/数组',
+            '链表/链表',
+            '链表/手写链表的技巧',
+            '栈/栈',
+            '递归/递归',
+            ['排序/排序', '排序算法介绍'],
+            '排序/冒泡、插入和选择排序',
+            '排序/归并排序和快速排序',
+            '排序/桶排序、计数排序和基数排序',
+            '排序/排序优化',
+            '二分查找/二分查找',
+            '二分查找/二分查找的变形',
+            '跳表/跳表',
+            '散列表/散列表',
+            '哈希算法/哈希算法',
+            '二叉树/二叉树',
+            '二叉树/二叉查找树',
+            '二叉树/红黑树',
+            '堆/堆和堆排序',
+            '堆/堆的应用',
+            '图/图',
+            '图/深度和广度优先搜索',
+            '字符串匹配/BF算法和RK算法',
+            '字符串匹配/BM算法',
+            '字符串匹配/KMP算法',
+            'Tire树/Tire树',
+            '贪心算法/贪心算法',
+            '分治算法/分治算法',
+            '回溯算法/回溯算法',
+            '动态规划/动态规划'
+          ]
+        },
+        {
+          title: 'LeetCode',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            'leetcode/数组',
+            'leetcode/链表',
+            'leetcode/队列',
+          ]
+        },
+      ],
+      '/network/': [{
+        title: 'network',
+        collapsable: false,
+        sidebarDepth: 2,
+        children: [
+          ['', '介绍'],
+          'http',
+          'https',
+          'UPD和TCP',
+          'get和post的区别'
+        ]
+      }, ],
       '/fee/': [
         {
           title: 'git',
