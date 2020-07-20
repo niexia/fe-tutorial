@@ -185,8 +185,7 @@ module.exports = {
             'webpack/介绍',
             'webpack/初识webpack',
             'webpack/webpack核心概念',
-            // 'webpack/从入门到真实项目配置',
-            // 'webpack/vue-cli2中的配置说明',
+            'webpack/webpack的运行机制',
             'webpack/优化'
           ]
         }, {
