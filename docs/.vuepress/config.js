@@ -151,6 +151,7 @@ module.exports = {
           collapsable: false,
           sidebarDepth: 2,
           children: [
+            'leetcode/说明',
             'leetcode/数组',
             'leetcode/链表',
             'leetcode/队列',
