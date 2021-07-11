@@ -9,17 +9,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/niexias/fe-tutorial.git"
+    "url": "git+https://github.com/niexia/fe-tutorial.git"
   },
   "keywords": [
     "webpack-config"
   ],
-  "author": "niexias",
+  "author": "niexia",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/niexias/fe-tutorial/issues"
+    "url": "https://github.com/niexia/fe-tutorial/issues"
   },
-  "homepage": "https://github.com/niexias/fe-tutorial#readme",
+  "homepage": "https://github.com/niexia/fe-tutorial#readme",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.6",

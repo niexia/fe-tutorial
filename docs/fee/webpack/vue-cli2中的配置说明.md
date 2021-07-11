@@ -783,7 +783,7 @@ module.exports = webpackConfig
   "name": "vue-demo",
   "version": "1.0.0",
   "description": "vue-cli2.x test",
-  "author": "niexias",
+  "author": "niexia",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",

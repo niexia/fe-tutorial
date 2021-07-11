@@ -30,7 +30,7 @@ module.exports = {
   },
   base: '/fe-tutorial/',
   themeConfig: {
-    repo: 'niexias/fe-tutorial',
+    repo: 'niexia/fe-tutorial',
     editLinks: true,
     editLinkText: '在 GitHub 上编辑此页',
     lastUpdated: '上次更新',
@@ -39,7 +39,7 @@ module.exports = {
       { text: '数据结构和算法', link: '/algo/' },
       { text: '网络协议', link: '/network/' },
       { text: '前端工程化', link: '/fee/' },
-      { text: '个人博客', link: 'https://niexias.github.io/' },
+      { text: '个人博客', link: 'https://niexia.github.io/' },
     ],
     sidebarDepth: 2,
     sidebar: {
