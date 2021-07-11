@@ -33,6 +33,7 @@ module.exports = {
     repo: 'niexia/fe-tutorial',
     editLinks: true,
     editLinkText: '在 GitHub 上编辑此页',
+    docsDir: 'docs',
     lastUpdated: '上次更新',
     nav: [
       { text: 'JavaScript', link: '/javaScript/' },
