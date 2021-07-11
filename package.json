@@ -4,7 +4,7 @@
   "description": "写代码做笔记",
   "main": "index.js",
   "dependencies": {
-    "vuepress": "^1.0.3"
+    "vuepress": "^1.8.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
