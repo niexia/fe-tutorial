@@ -166,7 +166,6 @@ module.exports = {
           ['', '介绍'],
           'http',
           'https',
-          'UPD和TCP',
           'get和post的区别'
         ]
       }, ],
