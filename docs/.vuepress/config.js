@@ -172,14 +172,23 @@ module.exports = {
       }, ],
       '/fee/': [
         {
-          title: 'git',
+          title: '工程化',
           collapsable: false,
           sidebarDepth: 2,
           children: [
-            'git/'
+            ['', '介绍']
+          ]
+        },
+        {
+          title: 'git 规范',
+          collapsable: false,
+          sidebarDepth: 2,
+          children: [
+            'git/',
+            'git/如何配置git提交规范'
           ]
         }, {
-          title: 'webpack',
+          title: '构建工具',
           collapsable: false,
           sidebarDepth: 2,
           children: [
@@ -187,16 +196,8 @@ module.exports = {
             'webpack/初识webpack',
             'webpack/webpack核心概念',
             'webpack/webpack的运行机制',
-            'webpack/优化'
           ]
-        }, {
-          title: '工程化',
-          collapsable: false,
-          sidebarDepth: 2,
-          children: [
-            'engineering/如何配置git提交规范',
-          ]
-        }
+        },
       ],
     }
   },
