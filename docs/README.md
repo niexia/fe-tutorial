@@ -2,7 +2,7 @@
 home: true
 heroImage: ./logo.jpg
 heroText: fe-tutorial
-tagline: 前端知识学习和使用笔记
+tagline:  When we set out to write software, we never know enough. ——Eric Evans
 actionText: 开始阅读 →
 actionLink: /javaScript/
 features:
