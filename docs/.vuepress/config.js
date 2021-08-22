@@ -38,9 +38,25 @@ module.exports = {
     nav: [
       { text: 'JavaScript', link: '/javaScript/' },
       { text: '数据结构和算法', link: '/algo/' },
-      { text: '网络协议', link: '/network/' },
-      { text: '前端工程化', link: '/fee/' },
-      { text: '个人博客', link: 'https://niexia.github.io/' },
+      { text: '网络', link: '/network/' },
+      { text: '工程化', link: '/fee/' },
+      {
+        text: '了解更多',
+        items: [
+          {
+            text: '个人博客',
+            link: 'https://niexia.github.io/'
+          },
+          {
+            text: '源码学习',
+            link: 'https://niexia.github.io/learn-source-code/'
+          },
+          {
+            text: '读书笔记',
+            link: 'https://niexia.github.io/reading-notes/'
+          }
+        ]
+      },
     ],
     sidebarDepth: 2,
     sidebar: {
