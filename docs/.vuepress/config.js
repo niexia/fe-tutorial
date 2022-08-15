@@ -44,6 +44,10 @@ module.exports = {
         text: '了解更多',
         items: [
           {
+            text: 'TypeScript',
+            link: '/typescript/'
+          },
+          {
             text: '个人博客',
             link: 'https://niexia.github.io/'
           },
@@ -188,12 +192,8 @@ module.exports = {
       }, ],
       '/fee/': [
         {
-          title: '工程化',
-          collapsable: false,
-          sidebarDepth: 2,
-          children: [
-            ['', '介绍']
-          ]
+          title: '前端工程化',
+          path: '/fee/',
         },
         {
           title: 'git 规范',
