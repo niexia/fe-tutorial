@@ -259,11 +259,11 @@ Person.prototype; // {}
 
 原型对象**默认**有一个公有且不可枚举的属性 `constructor`，这个属性指向 `prototype` 属性所在函数的指针。例如上面的例子 `Person.prototype.constructor === Person`。
 
-![prototype](../.vuepress/public/images/javascript-Object-prototype-eg1.png)
+![prototype](../public/assets/javascript-Object-prototype-eg1.png)
 
 具体就是：
 
-![prototype](../.vuepress/public/images/javascript-Object-prototype-eg3.png)
+![prototype](../public/assets/javascript-Object-prototype-eg3.png)
 
 可以看到，实例创建之后，它和构造函数并没有直接关系。
 
@@ -279,7 +279,7 @@ console.log(obj.name) // Kevin
 
 其实原型对象就是通过 Object 构造函数生成的，结合之前所讲，实例的 `__proto__` 指向构造函数的 `prototype`，所以我们再更新下关系图：
 
-![prototype](../.vuepress/public/images/javascript-Object-prototype-eg2.png)
+![prototype](../public/assets/javascript-Object-prototype-eg2.png)
 
 ### 属性访问
 
@@ -677,11 +677,11 @@ SubType.prototype.getSubValue = function(){
 }
 ```
 
-![prototype chain](../.vuepress/public/images/javascript-Object-prototypeChain-eg1.png)
+![prototype chain](../public/assets/javascript-Object-prototypeChain-eg1.png)
 
 终极全图：
 
-![prototype chain](../.vuepress/public/images/javascript-Object-prototypeChain.jpg)
+![prototype chain](../public/assets/javascript-Object-prototypeChain.jpg)
 
 这部分的内容好难整理...，想写的细一点，要觉得太多了，想精简一些，有感觉不知道怎么删。主要还是理解 `prototype`、`constructor`、`[[Prototype]]` 三者之间的关系。
 

@@ -52,7 +52,7 @@ Web 技术和业务日益复杂和多元，相比以前的时候简单拼接几�
 
 目前的前端框架 React、Vue、Angular 都是组件化的框架，几乎任意类型的应用界面都可以抽象为一个组件树：
 
-![components](../.vuepress/public/images/fee-components.png)
+![components](../public/assets/fee-components.png)
 
 ## 自动化
 

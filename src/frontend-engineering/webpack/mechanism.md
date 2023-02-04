@@ -237,7 +237,7 @@ const yargs = require("yargs").usage(`webpack-cli ${require("../package.json").v
 It gives you:
 - commands and (grouped) options (my-program.js serve --port=5000).
 - a dynamically generated help menu based on your arguments.
-![yargs menu](../../.vuepress/public/images/webapck-operating-principle-1.png)
+![yargs menu](../../public/assets/webapck-operating-principle-1.png)
 - bash-completion shortcuts for commands and options.
 - and tons more.
 
@@ -267,7 +267,7 @@ const GROUPS = {
 
 可以执行一下 help `./node_modules/webpack/bin/webpack.js help` 来查看：
 
-![yargs options](../../.vuepress/public/images/webapck-operating-principle-2.png)
+![yargs options](../../public/assets/webapck-operating-principle-2.png)
 
 1. 分析命令行参数，对各个参数进行转换，组成编译配置项
 

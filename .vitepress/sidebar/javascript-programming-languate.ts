@@ -5,7 +5,7 @@ function getJavascriptSidebar () {
       items: [
         {
           text: '开始',
-          link: '/javascript/',
+          link: '/javascript/programming-language/',
         },
         {
           text: '执行环境和执行栈',

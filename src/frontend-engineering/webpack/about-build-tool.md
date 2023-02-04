@@ -15,7 +15,7 @@
 
 ## 构建的演变之路
 
-![build tools](../../.vuepress/public/images/engineering-webpack-buildTools.png)
+![build tools](../../public/assets/engineering-webpack-buildTools.png)
 
 ## 为什么选择 webpack
 

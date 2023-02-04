@@ -152,7 +152,7 @@ npm i -D cz-conventional-changelog
 
 这样就可以了，现在执行 `npm run commit` 就出现提示了，如下图:
 
-![commitizen](../../.vuepress/public/images/engineering-git-commitMessage-step1.png)
+![commitizen](../../public/assets/engineering-git-commitMessage-step1.png)
 
 
 上面直接使用了 `cz-conventional-changelog` 作为 Adapter，如果需要自定义 Adapter，比如：默认的提交 types 可能特别多，有些时候我们可能只需要其中的某些 type，或者自定义type，那么可以通过 `cz-customizable`，这里不详细介绍了。
@@ -182,7 +182,7 @@ module.exports = {
 };
 ```
 
-![commitlint](../../.vuepress/public/images/engineering-git-commitMessage-step2.png)
+![commitlint](../../public/assets/engineering-git-commitMessage-step2.png)
 
 ## git hook
 
@@ -214,7 +214,7 @@ npm install husky --save-dev
 
 这样就完成了！
 
-![husky](../../.vuepress/public/images/engineering-git-commitMessage-step3.png)
+![husky](../../public/assets/engineering-git-commitMessage-step3.png)
 
 ## 版本管理
 

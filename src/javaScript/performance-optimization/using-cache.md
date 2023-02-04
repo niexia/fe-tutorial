@@ -13,7 +13,7 @@
 
 当查找缓存都没有命中时，才会请求网络。为了理解，看一下淘宝的 Network 面板截图：
 
-![HTTP Cache](../../.vuepress/public/images/javascript-effective-httpCache1.png)
+![HTTP Cache](../../public/assets/javascript-effective-httpCache1.png)
 
 就可以看到 `from xxx` 这样的描述，也就是这些资源是通过缓存获取到的。memory cache 对应的就是 Memory Cache，dist cache 对应的就是 Dist Cache，ServiceWorker 对应的就是 Service Worker。
 
@@ -23,7 +23,7 @@ HTTP 缓存是最熟悉的一种缓存机制，分为**强缓存**和**协商缓
 
 浏览器与服务器通信的方式为应答模式，即是：浏览器发起HTTP请求 – 服务器响应该请求。那么浏览器第一次向服务器发起该请求后拿到请求结果，会根据响应报文中HTTP头的缓存标识，决定是否缓存结果，是则将请求结果和缓存标识存入浏览器缓存中，简单的过程如下图：
 
-![HTTP Cache](../../.vuepress/public/images/javascript-effective-httpCache2.png)
+![HTTP Cache](../../public/assets/javascript-effective-httpCache2.png)
 
 由上图可以知道：
 
@@ -38,7 +38,7 @@ HTTP 缓存是最熟悉的一种缓存机制，分为**强缓存**和**协商缓
 
 命中强缓存的情况下，返回的 HTTP 状态码为 **200**：
 
-![HTTP Cache](../../.vuepress/public/images/javascript-effective-httpCache3.png)
+![HTTP Cache](../../public/assets/javascript-effective-httpCache3.png)
 
 #### 强缓存的实现
 
@@ -80,7 +80,7 @@ cache-control: max-age=31536000
 
 看个例子：
 
-![HTTP Cache](../../.vuepress/public/images/javascript-effective-httpCache4.png)
+![HTTP Cache](../../public/assets/javascript-effective-httpCache4.png)
 
 在上面的例子中可以看到：
 
@@ -97,11 +97,11 @@ Cache-Control 的优先级比 expires，那么直接根据 Cache-Control 的值�
 
 1. 协商缓存生效，服务端提示缓存资源未改动（Not Modified），资源会被重定向到浏览器缓存，这种情况下网络请求对应的状态码是 304。
 
-![HTTP Cache](../../.vuepress/public/images/javascript-effective-httpCache5.png)
+![HTTP Cache](../../public/assets/javascript-effective-httpCache5.png)
 
 2. 协商缓存失效，返回 200 和请求结果。
 
-![HTTP Cache](../../.vuepress/public/images/javascript-effective-httpCache6.png)
+![HTTP Cache](../../public/assets/javascript-effective-httpCache6.png)
 
 #### 协商缓存的实现
 
@@ -109,11 +109,11 @@ Cache-Control 的优先级比 expires，那么直接根据 Cache-Control 的值�
 
 `Last-Modified` 是一个时间戳，首次请求时，服务器响应请求返回该资源文件在服务器最后被修改的时间，如下：
 
-![HTTP Cache](../../.vuepress/public/images/javascript-effective-httpCache7.png)
+![HTTP Cache](../../public/assets/javascript-effective-httpCache7.png)
 
 随后每次请求时，会带上一个叫 `If-Modified-Since` 的时间戳字段，它的值正是上一次 response 返回给它的 `last-modified` 值：
 
-![HTTP Cache](../../.vuepress/public/images/javascript-effective-httpCache8.png)
+![HTTP Cache](../../public/assets/javascript-effective-httpCache8.png)
 
 服务器接收到这个时间戳后，会比对该时间戳和资源在服务器上的最后修改时间是否一致，从而判断资源是否发生了变化。如果发生了变化，就会返回一个完整的响应内容，并在 Response Headers 中添加新的 `Last-Modified` 值，状态码为200；否则，返回如上图的 304 响应，Response Headers 不会再添加 `Last-Modified` 字段。
 
@@ -130,11 +130,11 @@ Cache-Control 的优先级比 expires，那么直接根据 Cache-Control 的值�
 
 `Etag` 和 `Last-Modified` 类似，当首次请求时，会在响应头里获取到一个最初的标识符字符串：
 
-![HTTP Cache](../../.vuepress/public/images/javascript-effective-httpCache9.png)
+![HTTP Cache](../../public/assets/javascript-effective-httpCache9.png)
 
 那么下一次请求时，请求头里就会带上 `if-None-Match`，它的值是上次请求返回的唯一标识 `Etag` 的值：
 
-![HTTP Cache](../../.vuepress/public/images/javascript-effective-httpCache10.png)
+![HTTP Cache](../../public/assets/javascript-effective-httpCache10.png)
 
 服务器收到该请求后，发现该请求头中含有 `If-None-Match`，则会根据`If-None-Match` 的字段值与该资源在服务器的 `Etag` 值做对比，一致则返回 304，代表资源无更新，继续使用缓存文件；不一致则重新返回资源文件，状态码为 200。
 
@@ -145,7 +145,7 @@ Cache-Control 的优先级比 expires，那么直接根据 Cache-Control 的值�
 
 面对一个具体的缓存需求时，我们到底该怎么决策呢？Chrome 给出了一张图：
 
-![HTTP Cache](../../.vuepress/public/images/javascript-effective-httpCache11.png)
+![HTTP Cache](../../public/assets/javascript-effective-httpCache11.png)
 
 这张流程图清楚地告诉了我们如何决策：
 
@@ -161,7 +161,7 @@ Cache-Control 的优先级比 expires，那么直接根据 Cache-Control 的值�
 
 还是看看开头这张图，在 Size 值里可以看到缓存存放的位置：from memory cache 和 from disk cache：
 
-![HTTP Cache](../../.vuepress/public/images/javascript-effective-httpCache1.png)
+![HTTP Cache](../../public/assets/javascript-effective-httpCache1.png)
 
 from memory cache 代表使用内存中的缓存，from disk cache 则代表使用的是硬盘中的缓存，浏览器读取缓存的顺序为 memory –> disk。
 
@@ -171,16 +171,16 @@ from memory cache 代表使用内存中的缓存，from disk cache 则代表使�
 
 1. 初次访问
 
-![HTTP Cache](../../.vuepress/public/images/javascript-effective-httpCache13.png)
+![HTTP Cache](../../public/assets/javascript-effective-httpCache13.png)
 
 2. 关闭标签页
 3. 重新打开
 
-![HTTP Cache](../../.vuepress/public/images/javascript-effective-httpCache14.png)
+![HTTP Cache](../../public/assets/javascript-effective-httpCache14.png)
 
 4. 刷新
 
-![HTTP Cache](../../.vuepress/public/images/javascript-effective-httpCache15.png)
+![HTTP Cache](../../public/assets/javascript-effective-httpCache15.png)
 
 看到这里，比较奇怪的是在刷新的时候，怎么同时存在着 from disk cache 和 from memory cache 吗？
 

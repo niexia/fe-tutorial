@@ -50,7 +50,7 @@
 
 无法直接理解和使用 HTML，所以需要将 HTML 转换为浏览器能够理解的结构——DOM 树。
 
-![DOM tree](../../.vuepress/public/images/javascript-browser-render-eg1.png)
+![DOM tree](../../public/assets/javascript-browser-render-eg1.png)
 
 ### 样式计算（Recalculate Style）
 
@@ -58,7 +58,7 @@
 
 1. 把 CSS 转换为浏览器能够理解的结构，会把获取到的 CSS 文本都转成 styleSheets，可以在控制台输入 `document.styleSheets` 查看。
 
-![styleSheets](../../.vuepress/public/images/javascript-browser-render-eg2.png)
+![styleSheets](../../public/assets/javascript-browser-render-eg2.png)
 
 2. 转换样式表中的属性值，使其标准化：
 
@@ -95,7 +95,7 @@ div  p {color:green;}
 
 那就就会得到这样的树：
 
-![CSS tree](../../.vuepress/public/images/javascript-browser-render-eg3.png)
+![CSS tree](../../public/assets/javascript-browser-render-eg3.png)
 
 ### 布局阶段
 
@@ -103,7 +103,7 @@ div  p {color:green;}
 
 1. 创建布局树，构建一棵只包含可见元素的布局树。
 
-![layout tree](../../.vuepress/public/images/javascript-browser-render-eg4.png)
+![layout tree](../../public/assets/javascript-browser-render-eg4.png)
 
 2. 布局计算，计算布局树中节点的坐标位置，并将计算结果写回到布局树中。
 
@@ -111,7 +111,7 @@ div  p {color:green;}
 
 有了布局树，接下来并不是直接绘制，而是需要先分层。因为页面中有很多复杂的效果，如一些复杂的 3D 变换、页面滚动，或者使用 z-indexing 做 z 轴排序等。为了显示这些效果，需要为特定节点生成专用图层，并生成一棵对应的**图层树**（Layer Tree）。就类似于 PS 中的图层。
 
-![Layer Tree](../../.vuepress/public/images/javascript-browser-render-eg5.png)
+![Layer Tree](../../public/assets/javascript-browser-render-eg5.png)
 
 ### 图层绘制
 
@@ -133,7 +133,7 @@ div  p {color:green;}
 
 这就是整个完整的流程，从 HTML 到 DOM、样式计算、布局、图层、图层绘制、栅格化、合成和显示。
 
-![Render](../../.vuepress/public/images/javascript-browser-render-eg6.png)
+![Render](../../public/assets/javascript-browser-render-eg6.png)
 
 ## 最后再看看重排和重绘
 
@@ -143,7 +143,7 @@ div  p {color:green;}
 
 通过 JavaScript 或者 CSS 修改元素的几何位置属性，例如改变元素的宽度、高度等，那么浏览器会触发重新布局，解析之后的一系列子阶段，这个过程就叫重排。
 
-![reflow](../../.vuepress/public/images/javascript-browser-render-eg7.png)
+![reflow](../../public/assets/javascript-browser-render-eg7.png)
 
 无疑，重排需要更新完整的渲染流水线，所以开销也是最大的。
 
@@ -151,7 +151,7 @@ div  p {color:green;}
 
 比如通过 JavaScript 更改某些元素的背景颜色，那么布局阶段将不会被执行，因为并没有引起几何位置的变换，所以就直接进入了绘制阶段，然后执行之后的一系列子阶段，这个过程就叫重绘。
 
-![repaint](../../.vuepress/public/images/javascript-browser-render-eg8.png)
+![repaint](../../public/assets/javascript-browser-render-eg8.png)
 
 相较于重排操作，重绘省去了布局和分层阶段，所以执行效率会比重排操作要高一些。
 

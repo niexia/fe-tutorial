@@ -74,7 +74,7 @@ var app = new Vue({
 
 为了使渲染过程更明晰一些，我们需要给这些”树“们一个特写:
 
-![Tree](../../.vuepress/public/images/javascript-effective-browserRender.png)
+![Tree](../../public/assets/javascript-effective-browserRender.png)
 
 - DOM 树：解析 HTML 以创建的是 DOM 树（DOM tree ）：渲染引擎开始解析 HTML 文档，转换树中的标签到 DOM 节点，它被称为“内容树”。
 - CSSOM 树：解析 CSS（包括外部 CSS 文件和样式元素）创建的是 CSSOM 树。CSSOM 的解析过程与 DOM 的解析过程是**并行的**。

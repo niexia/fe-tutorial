@@ -23,7 +23,7 @@ JavaScrip t语言的设计者意识到，这时主线程完全可以不管IO设�
 
 下图就是主线程和任务队列的示意图：
 
-![Task Queue](../../.vuepress/public/images/javascript-browser-EventLoop-taskQueue.jpg)
+![Task Queue](../../public/assets/javascript-browser-EventLoop-taskQueue.jpg)
 
 ### 事件和回调函数
 
@@ -41,7 +41,7 @@ JavaScrip t语言的设计者意识到，这时主线程完全可以不管IO设�
 
 为了更好地理解Event Loop，请看下图（转引自Philip Roberts的演讲《Help, I'm stuck in an event-loop》）。
 
-![EventLoop](../../.vuepress/public/images/javascript-browser-EventLoop.jpg)
+![EventLoop](../../public/assets/javascript-browser-EventLoop.jpg)
 
 上图中，主线程运行的时候，产生堆（heap）和栈（stack），栈中的代码调用各种外部API，它们在"任务队列"中加入各种事件（click，load，done）。只要栈中的代码执行完毕，主线程就会去读取"任务队列"，依次执行那些事件所对应的回调函数。
 
@@ -187,7 +187,7 @@ Promise.resolve().then(() => console.log(4));
 // 4
 ```
 
-![microtask](../../.vuepress/public/images/javascript-browser-EventLoop-node-eg1.png)
+![microtask](../../public/assets/javascript-browser-EventLoop-node-eg1.png)
 
 **注意，只有前一个队列全部清空以后，才会执行下一个队列。**
 
@@ -244,7 +244,7 @@ Node 的官方文档是这样介绍的：
 
 **每个阶段都有一个先进先出的回调函数队列。只有一个阶段的回调函数队列清空了，该执行的回调函数都执行了，事件循环才会进入下一个阶段。**
 
-![EventLoop](../../.vuepress/public/images/javascript-browser-EventLoop-node-eg2.png)
+![EventLoop](../../public/assets/javascript-browser-EventLoop-node-eg2.png)
 
 下面简单介绍一下每个阶段的含义：
 

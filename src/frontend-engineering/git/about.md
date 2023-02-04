@@ -18,13 +18,13 @@
 
 其中就流行的就是 RCS，它的工作原理就是在硬盘上保存补丁集，通过应用所有补丁，可以重新计算各个版本的文件内容。
 
-![RCS](../../.vuepress/public/images/git-versionControl-rcs.png)
+![RCS](../../public/assets/git-versionControl-rcs.png)
 
 ## 集中化的版本控制
 
 本地版本控制明显存在的问题就是不能让不同系统上的开发者协同工作。于是集中化的版本控制系统（Centralized Version Control Systems，简称 CVCS）就应运而生了，有一个单一的集中管理的服务器，保存所有文件的修订版本，而协同工作的人们都通过客户端连接到这台服务器，取出最新的文件或者提交更新。
 
-![CVCS](../../.vuepress/public/images/git-versionControl-cvcs.png)
+![CVCS](../../public/assets/git-versionControl-cvcs.png)
 
 但是这么做显而易见的缺点就是中央服务器的单点故障。如果宕机一小时，那么在这一小时内，谁都无法提交更新，也就无法协同工作。如果数据库所在磁盘发生损坏，有没有做备份，你将丢失所有数据——包含整个变更历史，只剩下人们在各自机器上保留的单独快照。
 
@@ -32,7 +32,7 @@
 
 于是分布式版本控制就诞生了（Distributed Version Control System，简称 DVCS）。客户端不仅仅提取最新版本的文件快照，而是把代码仓库完整地镜像下来，这么一来，任何一处协同工作的服务器发生故障，时候都可以用任何一个镜像出来的本地仓库恢复。每一次克隆，实际上都一次对嗲吗仓库的完整备份。
 
-![DVCS](../../.vuepress/public/images/git-versionControl-dvcs.png)
+![DVCS](../../public/assets/git-versionControl-dvcs.png)
 
 Git 诞生于2005年，它设计的目标是：
 - 速度

@@ -6,7 +6,7 @@
 
 发送端在发起请求之后，经过每一层都会加上首部信息。接收端接收之后，每经过一层就会删除相应的头部。
 
-![http-request-process](../.vuepress/public/images/network-http-requestProcess.png)
+![http-request-process](../public/assets/network-http-requestProcess.png)
 
 ### 关键点
 
@@ -34,7 +34,7 @@ DNS：好的，hackr.jp 对应的ip地址是 20.189.105.112
 
 2. http 协议：对请求的内容处理。哦，原来你想要这台计算机上/xss/的资源啊
 
-![http-request-detail](../.vuepress/public/images/network-http-requestDetail.png)
+![http-request-detail](../public/assets/network-http-requestDetail.png)
 
 ## 三次握手
 
@@ -42,7 +42,7 @@ DNS：好的，hackr.jp 对应的ip地址是 20.189.105.112
 
 发送端首先发一个带SYN标志的数据给对方。接受端接受到之后回传一个带有SYN/ACK标志的数据包以传达确认信息。最后，发送端再回传一个带ACK标志的数据包，代表握手结束。
 
-![three-times-handshake](../.vuepress/public/images/network-http-threeTimesHandshake.png)
+![three-times-handshake](../public/assets/network-http-threeTimesHandshake.png)
 
 就好像是这样的对话：
 
@@ -83,7 +83,7 @@ Client 会在发送出 ACK 之后进入到 TIME_WAIT 状态。Client 会设置�
 
 客户端像服务器发起请求时会生成一段请求报文，**请求报文是由请求方法、URL、协议版本，可选的请求首部字段和内容实体构成**。
 
-![http-request](../.vuepress/public/images/network-http-request.png)
+![http-request](../public/assets/network-http-request.png)
 
 接收到请求的服务器，会将请求内容的处理结果以响应的形式返回。
 
@@ -104,13 +104,13 @@ Content-Type: text/html
 
 响应报文基本上由协议版本、状态码（表示请求成功或失败的数字代码）、用以解释状态码的原因短语、可选的响应首部字段以及实体主体构成。
 
-![http-response](../.vuepress/public/images/network-http-response.png)
+![http-response](../public/assets/network-http-response.png)
 
 ## HTTP 是不保存状态的协议
 
 HTTP 是一种不保存状态，即无状态（stateless）协议。HTTP 协议自身不对请求和响应之间的通信状态进行保存。也就是说在 HTTP 这个级别，协议对于发送过的请求或响应都不做持久化处理。
 
-![http-request](../.vuepress/public/images/network-http-stateless.png)
+![http-request](../public/assets/network-http-stateless.png)
 
 使用 HTTP 协议，每当有新的请求发送时，就会有对应的新响应产生。协议本身并不保留之前一切的请求或响应报文的信息。这是为了更快地处理大量事务，确保协议的可伸缩性，而特意把 HTTP 协议设
 计成如此简单的。
@@ -121,14 +121,14 @@ HTTP/1.1 虽然是无状态协议，但为了实现期望的保持状态功能�
 
 Cookie 会根据从服务器端发送的响应报文内的一个叫做 Set-Cookie 的首部字段信息，通知客户端保存 Cookie。当下次客户端再往该服务器发送请求时，客户端会自动在请求报文中加入 Cookie 值后发送出去。
 
-![http-cookie](../.vuepress/public/images/network-http-cookie-1.png)
-![http-cookie](../.vuepress/public/images/network-http-cookie-2.png)
+![http-cookie](../public/assets/network-http-cookie-1.png)
+![http-cookie](../public/assets/network-http-cookie-2.png)
 
 ## 状态码
 
 HTTP 状态码负责表示客户端 HTTP 请求的返回结果、标记服务器端的处理是否正常、通知出现的错误等工作。
 
-![http-statusCode](../.vuepress/public/images/network-http-statusCode.png)
+![http-statusCode](../public/assets/network-http-statusCode.png)
 
 ### 2XX 成功
 

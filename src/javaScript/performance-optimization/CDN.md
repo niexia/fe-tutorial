@@ -17,7 +17,7 @@ CDN 访问的过程主要有：
 5. 全局负载均衡系统返回确定的 cdn 缓存服务器的地址给客户端。
 6. 客户端请求缓存服务器上的文件。
 
-![CDN](../../.vuepress/public/images/javascript-effective-CDN.png)
+![CDN](../../public/assets/javascript-effective-CDN.png)
 
 ## CDN 优势
 
@@ -37,7 +37,7 @@ CDN 的核心点有两个: 一个是缓存，一个是回源。
 
 比如看一下淘宝：
 
-![CDN](../../.vuepress/public/images/javascript-effective-CDN-use.png)
+![CDN](../../public/assets/javascript-effective-CDN-use.png)
 
 ## CDN 优化细节
 

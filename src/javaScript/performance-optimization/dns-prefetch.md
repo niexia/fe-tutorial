@@ -70,7 +70,7 @@ DNS Prefetch 的原理就是在 HTTP 建立之前，将 DNS 查询的结果缓�
 
 打开淘宝，看它的 link 标签，可以看到它的预解析列表：
 
-![dns prefetch](../../.vuepress/public/images/javascript-effective-dns.png)
+![dns prefetch](../../public/assets/javascript-effective-dns.png)
 
 ### 如何更好的使用
 
