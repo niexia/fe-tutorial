@@ -17,7 +17,7 @@ function getBrowserSidebar() {
         },
         {
           text: '栈空间和堆空间',
-          link: '/the-beauty-of-design-patterns/heap-stack',
+          link: '/javascript/browser/heap-stack',
         },
         {
           text: '垃圾回收',

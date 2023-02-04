@@ -12,7 +12,7 @@ InfiniteScroll 无限滚动，也就是滚动到底部时，加载更多的数�
 - scrollTop：可以获取或设置一个元素的内容垂直滚动的像素数。
 - clientHeight：只读属性，对于没有定义CSS或者内联布局盒子的元素为0，否则，它是元素内部的高度(单位像素)，包含内边距，但不包括水平滚动条、边框和外边距。
 
-![eg1](../public/assets/javascript-InfiniteScroll-eg1.png)
+![eg1](../../public/assets/javascript-InfiniteScroll-eg1.png)
 
 通过计算就可以的得到滚动条到底部的距离：
 
@@ -169,11 +169,11 @@ shouldTrigger = container.scrollHeight - scrollBottom <= distance;
 
 2. 如果滚动容器不是元素本身，那判断就会麻烦一些：
 
-![eg2](../public/assets/javascript-InfiniteScroll-eg2.png)
+![eg2](../../public/assets/javascript-InfiniteScroll-eg2.png)
 
 当鼠标往下滚的时候，`el` 就会向上，`heightBelowTop - offsetHeight + borderBottom` 其实就是 `el` 底部到 `container` 的距离，它和 `distance` 含义其实是一样的。
 
-![eg3](../public/assets/javascript-InfiniteScroll-eg3.png)。
+![eg3](../../public/assets/javascript-InfiniteScroll-eg3.png)。
 
 如果满足条件就会执行回调 `cb.call(vm)`。同时，上面说过设置 `immediate` 会立即加载，加载完成之后移除 `observer`。
 

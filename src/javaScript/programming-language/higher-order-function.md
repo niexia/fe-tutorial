@@ -128,9 +128,9 @@ eat(); // 吃饱了
 
 ## 应用
 
-### [柯里化](./函数柯里化.md)
+### <a href="./function-curry" target="_blank" rel="noreferrer">柯里化</a>
 
-### [函数节流](./节流函数和防抖函数.md)
+### <a href="./throttle-debounce" target="_blank" rel="noreferrer">函数节流</a>
 
 ### 分时函数
 

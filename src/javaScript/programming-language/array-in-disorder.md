@@ -122,7 +122,7 @@ for (var key in res) {
 console.log(res)
 ```
 
-![shuffle](../public/assets/javascript-shuffle.png)
+![shuffle](../../public/assets/javascript-shuffle.png)
 
 真正的实现了乱序的效果！
 

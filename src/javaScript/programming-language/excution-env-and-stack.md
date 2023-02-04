@@ -52,7 +52,7 @@ console.log('Inside Global Execution Context');
 
 ```
 
-![call-stack](../public/assets/javascript-callStack.png)
+![call-stack](../../public/assets/javascript-callStack.png)
 
 当上述代码在浏览器中加载时，JavaScript 引擎会创建一个全局执行环境并且将它推入当前的执行栈。当调用 `first()` 函数时，JavaScript 引擎为该函数创建了一个新的执行环境并将其推到当前执行栈的顶端。
 

@@ -56,7 +56,7 @@ foo(2); // 4
 
 可以把作用域链比喻成一个建筑：
 
-![scope chain](../public/assets/javascript-scopeChain.png)
+![scope chain](../../public/assets/javascript-scopeChain.png)
 
 第 1 层代表当前执行的作用域，也就是你所处的位置，顶层代表全局作用域。查找变量时，先在当前楼层查找。如果没有找到，就坐电梯往上一层；如果还是没有找到就继续往上，以此类推。一旦达到顶层（全局作用域），不管有没有找到，查找过程都将停止。
 

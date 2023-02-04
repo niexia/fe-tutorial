@@ -53,7 +53,8 @@ var app = new Vue({
 
 ## 2. 浏览器的渲染机制和如何优化
 
-详细的渲染过程可以看[浏览器渲染过程](../browser/浏览器渲染过程.md)
+详细的渲染过程可以看
+<a href="../browser/render-process" target="_blank" rel="noreferrer">浏览器渲染过程</a>
 
 ### 渲染流程
 

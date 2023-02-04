@@ -75,7 +75,7 @@ foo();
 
 ![eg5](../../public/assets/javascript-browser-store-eg5.png)
 
-所以进行赋值的时候需要考虑是否需要[深拷贝和浅拷贝](../深拷贝和浅拷贝.md)。
+所以进行赋值的时候需要考虑是否需要<a href="../programming-language/deep-clone-shallow-clone" target="_blank" rel="noreferrer">深拷贝和浅拷贝</a>
 
 ## 再谈闭包的存储
 

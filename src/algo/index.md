@@ -90,7 +90,7 @@ function call(n) {
 
 可以粗略的分为两类，多项式量级和非多项式量级。其中非多项式量级只有两个：O(2^n) 和 O(n!)，当数据规模越来越大时，非多项式量级的执行时间会急剧增加，求解问题的执行时间会无线增长，所以非多项式时间复杂度的算法是非常低效的算法。
 
-![complexity](../public/assets//dataStructure-complexity.png)
+![complexity](../public/assets/dataStructure-complexity.png)
 
 ### 空间复杂度
 
