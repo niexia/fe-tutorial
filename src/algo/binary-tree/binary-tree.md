@@ -1,3 +1,6 @@
+<script setup>
+import NxTip from '../../../.vitepress/theme/components/nx-tip.vue'
+</script>
 # 二叉树
 
 二叉树是一种非线性表结构，二叉树有哪几种存储方式？什么样的二叉树适合用数组来存储？

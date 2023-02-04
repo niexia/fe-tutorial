@@ -1,3 +1,7 @@
+<script setup>
+import NxTip from '../../../.vitepress/theme/components/nx-tip.vue'
+</script>
+
 # 散列表
 
 散列表英文叫作 Hash Table，平时也叫“哈希表”或者“Hash 表”。
