@@ -1,0 +1,1 @@
+import{_ as t,o as a,c as r}from"./app.070707c9.js";const e=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"algo/string-matching/KMP.md"}');const n=t({name:"algo/string-matching/KMP.md"},[["render",function(t,e,n,s,i,o){return a(),r("div")}]]);export{e as __pageData,n as default};
