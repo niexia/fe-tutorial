@@ -1,0 +1,45 @@
+{
+  "name": "fe-tutorial",
+  "version": "1.0.0",
+  "description": "写代码做笔记",
+  "main": "index.js",
+  "dependencies": {
+    "vuepress": "^1.8.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "commitizen": "^4.0.3",
+    "gh-pages": "^2.1.1",
+    "husky": "^4.2.1",
+    "standard-version": "^7.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "deploy": "gh-pages -d docs/.vuepress/dist",
+    "deploy:build": "npm run docs:build && gh-pages -d docs/.vuepress/dist",
+    "commit": "git-cz",
+    "release": "standard-version"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niexia/fe-tutorial.git"
+  },
+  "keywords": [
+    "javascript",
+    "note"
+  ],
+  "author": "yangjin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/niexia/fe-tutorial/issues"
+  },
+  "homepage": "https://github.com/niexia/fe-tutorial#readme"
+}
