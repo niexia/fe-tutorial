@@ -46,6 +46,10 @@ const nav: ThemeConfig['nav'] = [
     link: '/frontend-engineering/'
   },
   {
+    text: 'typescript tutorial',
+    link: 'https://niexia.github.io/typescript-tutorial/'
+  },
+  {
     text: 'Blog',
     link: 'https://niexia.github.io/'
   },
